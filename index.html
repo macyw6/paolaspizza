@@ -56,13 +56,12 @@ Author URL: http://w3layouts.com
             </li>
             <span class="">
             <li class="px-4 fill-none">
-              <a href="#url" class="btn btn-style btn-secondary fa fa-phone">(610) 913-2221</a>
+    
+              <a href="tel:610-913-2221" class="btn btn-style btn-secondary fa fa-phone">(610) 913-2221</a>
               </li>
             </span>
           </ul>
-          <div class="popup">
-            <a href="#domain" class="domain" data-toggle="modal" data-target="#DomainModal">
-              <div class="hamburger1">
+         
                 <div></div>
                 <div></div>
                 <div></div>
@@ -97,7 +96,7 @@ Author URL: http://w3layouts.com
             <h5 class="widget-title">Contact Us</h5>
             <ul class="icon-rounded address">
               <li>
-                <p> New York, NY-90814 Hill Station 4th Street</p>
+                <p> 2658 Ridge Rd, Elverson, PA 19520</p>
               </li>
               <li class="mt-3">
                 <p><span class="fa fa-phone"></span> <a href="tel:+404-11-22-89">+1-2345-345-678-11</a></p>
@@ -118,7 +117,7 @@ Author URL: http://w3layouts.com
               <li><a class="social-link twitter" href="#url" target="_blank"><span class="fa fa-twitter"></span></a></li>
               <li><a class="social-link linkedin" href="#url" target="_blank"><span class="fa fa-linkedin"></span></a></li>
               <li><a class="social-link facebook" href="#url" target="_blank"><span class="fa fa-facebook"></span></a></li>
-            </ul>
+            </ul>tel:610-913-2221
           </div>
 
 
@@ -137,9 +136,9 @@ Author URL: http://w3layouts.com
                 <div class="col-lg-7 section-width align-self">
                     <h5>2658 Ridge Rd, Elverson, PA 19520</h5>
                     <h2>Place an Order</h2>
-                    <a href="#url" class="btn btn-secondary btn-outline-style mt-md-5 mt-4"> 
+                    <a href="tel:610-913-2221" class="btn btn-secondary btn-outline-style mt-md-5 mt-4"> 
                         <span class="fa fa-phone"></span> (610) 913-2221</a>
-                        <a href="#url2" class="btn btn-secondary-2 btn-outline-style mt-md-5 mt-4 "> 
+                        <a href="services.html" class="btn btn-secondary-2 btn-outline-style mt-md-5 mt-4 "> 
                             <span class="fa fa-list"></span> Menu</a>
                 </div>
                 <div class="col-lg-5 history-info mt-lg-0 mt-5 pt-lg-0 pt-md-4">
@@ -153,9 +152,164 @@ Author URL: http://w3layouts.com
         </div>
 </section>
 
-  <!--//MENU-JS-->
-  <script src="assets/js/bootstrap.min.js"></script>
+</script>
+<!-- /move top -->
+</section>
 
+<!-- jQuery and Bootstrap JS -->
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+
+<!-- libhtbox -->
+<script src="assets/js/lightbox-plus-jquery.min.js"></script>
+
+
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+<script src="assets/js/counter.js"></script>
+<script>
+  $(document).ready(function () {
+    $('.popup-with-zoom-anim').magnificPopup({
+      type: 'inline',
+
+      fixedContentPos: false,
+      fixedBgPos: true,
+
+      overflowY: 'auto',
+
+      closeBtnInside: true,
+      preloader: false,
+
+      midClick: true,
+      removalDelay: 300,
+      mainClass: 'my-mfp-zoom-in'
+    });
+
+    $('.popup-with-move-anim').magnificPopup({
+      type: 'inline',
+
+      fixedContentPos: false,
+      fixedBgPos: true,
+
+      overflowY: 'auto',
+
+      closeBtnInside: true,
+      preloader: false,
+
+      midClick: true,
+      removalDelay: 300,
+      mainClass: 'my-mfp-slide-bottom'
+    });
+  });
+</script>
+
+<!-- testimonials owlcarousel -->
+<script src="assets/js/owl.carousel.js"></script>
+<script>
+  $(document).ready(function () {
+    $('.owl-two').owlCarousel({
+      loop: true,
+      margin: 30,
+      nav: false,
+      responsiveClass: true,
+      autoplay: false,
+      autoplayTimeout: 5000,
+      autoplaySpeed: 1000,
+      autoplayHoverPause: false,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false
+        },
+        480: {
+          items: 1,
+          nav: false
+        },
+        667: {
+          items: 1,
+          nav: false
+        },
+        1000: {
+          items: 1,
+          nav: false
+        }
+      }
+    })
+  })
+</script>
+<!-- //script for Testimonials-->
+
+<!-- script for food-->
+<script>
+  $(document).ready(function () {
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 0,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+          nav: true
+        },
+        480: {
+          items: 2,
+          nav: true,
+          margin: 20
+        },
+        769: {
+          items: 3,
+          nav: true,
+          margin: 20
+        },
+        1280: {
+          items: 4,
+          nav: true,
+          loop: true,
+          margin: 25
+        }
+      }
+    })
+  })
+</script>
+<!-- //script for food-->
+
+<!-- disable body scroll which navbar is in active -->
+<script>
+  $(function () {
+    $('.navbar-toggler').click(function () {
+      $('body').toggleClass('noscroll');
+    })
+  });
+</script>
+<!-- disable body scroll which navbar is in active -->
+<!--/MENU-JS-->
+<script>
+  $(window).on("scroll", function () {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 80) {
+      $("#site-header").addClass("nav-fixed");
+    } else {
+      $("#site-header").removeClass("nav-fixed");
+    }
+  });
+
+  //Main navigation Active Class Add Remove
+  $(".navbar-toggler").on("click", function () {
+    $("header").toggleClass("active");
+  });
+  $(document).on("ready", function () {
+    if ($(window).width() > 991) {
+      $("header").removeClass("active");
+    }
+    $(window).on("resize", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+    });
+  });
+</script>
+<!--//MENU-JS-->
+<script src="assets/js/bootstrap.min.js"></script>
   </body>
 
   </html>
