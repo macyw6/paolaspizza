@@ -12146,7 +12146,8 @@ h3.menu-section-title {
   color: var(--primary-color); }
 
 .menu-item-description p {
-  margin-top: 10px; }
+  margin-top: 10px;
+ }
 
 .menu-bg {
   background: url(../images/team.png) no-repeat center;
